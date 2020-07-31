@@ -17,19 +17,14 @@ var convert = function(s, numRows) {
         matrix.push([]);
     }
     
-    // matrix[0].push("test");
-    // console.log(matrix);
-    
     let down = false;
     let row = 0;
     
     for (let i = 0; i < s.length; i++) {
-        // console.log(`Inside for loop: ${matrix[0]}`);
         if ((row === 0) || (row === numRows - 1)) {
             down = !down;
         }
         
-        // console.log(`Pushing to row ${row}`);
         matrix[row].push(s[i]);
         if (down) {
             row++;
